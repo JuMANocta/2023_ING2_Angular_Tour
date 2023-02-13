@@ -16,4 +16,15 @@ export class MessageService {
   clear() {
     this.messages = [];
   }
+
+  clearMessage(message: string) {
+    // const index = this.messages.indexOf(message);
+    // if(index !== -1) this.messages.splice(index, 1);
+    // 
+    this.messages = this.messages.filter(
+      m => m !== message
+      // function(m){m !== message}
+      // (m) => {m !== message}
+    );
+  }
 }
