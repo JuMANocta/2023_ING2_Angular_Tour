@@ -1,3 +1,8 @@
 <h1>{{ title }}</h1>
-<app-heros></app-heros>
+<nav class="bg-blue-500 p-4 flex justify-around">
+    <a routerLink="/" class="text-white font-bold hover:text-blue-200">Index</a>    
+    <a routerLink="/heros" class="text-white font-bold hover:text-blue-200">Héros</a>
+    <a routerLink="/dashboard" class="text-white font-bold hover:text-blue-200">Dashboard</a>
+</nav>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
