@@ -1,0 +1,13 @@
+<h2 class="m-6 text-3xl font-bold underline">Marvel Héros</h2>
+<div class="flex bg-gray-200 rounded-lg p-6">
+<app-hero-details [hero]="selectedHero"></app-hero-details>
+    <ul class="flex flex-col list-none items-center w-full">
+        <li class="mb-1" *ngFor="let hero of heros">
+            <button (click)="onSelect(hero)"
+                class="text-xl flex bg-[#326496] hover:bg-[#1d4874] text-white font-bold rounded-md w-[240px] h-10 text-left active:bg-black">
+                <span class="bg-black rounded-l-md h-full p-2">{{hero.id}}</span>
+                <span class="ml-6 m-auto">{{hero.name}}</span>
+            </button>
+        </li>
+    </ul>
+</div>
